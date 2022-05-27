@@ -20,7 +20,7 @@ class Category extends Model
         return config('app.url') . $value;
     }
 
-    protected function iconUrl(): string
+    protected function getIconUrlAttribute($value): string
     {
         return config('app.url') . $value;
     }
