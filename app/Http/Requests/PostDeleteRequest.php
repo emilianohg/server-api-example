@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Models\Post;
 use Illuminate\Foundation\Http\FormRequest;
 
-class PostUpdateRequest extends FormRequest
+class PostDeleteRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -21,10 +21,6 @@ class PostUpdateRequest extends FormRequest
 
     public function rules(): array
     {
-        return [
-            'category_id' => 'exists:categories,id',
-            'title' => 'string',
-            'description' => 'string',
-        ];
+        return [];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostDeleteRequest;
 use App\Http\Requests\PostStoreRequest;
 use App\Http\Requests\PostUpdateRequest;
 use App\Models\Post;
@@ -220,7 +221,7 @@ class PostsController extends Controller
      *     }
      * )
      */
-    public function delete(int $id): JsonResponse
+    public function delete(int $id, PostDeleteRequest $request): JsonResponse
     {
         $post = Post::query()->findOrFail($id);
 
