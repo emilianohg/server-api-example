@@ -6,13 +6,12 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class UserSeeder extends Seeder
+class PostSeeder extends Seeder
 {
     public function run()
     {
-        User::factory()
+        Post::factory()
             ->count(50)
-            ->sequence(fn ($sequence) => ['email' => 'correo'.($sequence->index + 1).'@example.com'])
             ->create();
     }
 }
